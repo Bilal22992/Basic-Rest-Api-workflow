@@ -4,7 +4,7 @@ import express from "express";
 
 
 const app = express();
-const token=""
+const token="";
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
@@ -25,7 +25,12 @@ const response= await axios.get(`https://secrets-api.appbrewery.com/secrets/${id
 res.render("index.ejs",{get:response.data})
         
     } catch (error) {
-        console.log(error.message);
+        console.log(error.message)
+        if(error.status===404)
+        {
+            res.render("index.ejs",{error1:"Cannot Find data for this id"})
+        }
+
     }
 })
 

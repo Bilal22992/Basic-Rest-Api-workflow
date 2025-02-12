@@ -21,6 +21,9 @@
                username:
                <%= get.username %>
             </p>
+            <% } else if (locals.error1) {%>
+                <p><%= error1 %></p>
+
             <% } else { %>
                 <p>Select your Desired Option</p>
                 <% } %>
