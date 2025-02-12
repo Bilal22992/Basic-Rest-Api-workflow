@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    background-color: rgb(200, 245, 245);
+    flex-direction: column;
+   width: 600px;
+   padding: 20px;
+   border-radius: 20px;
+  
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.outer-container{
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.text-box{
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+    
+}
+.buttons input {
+    background-color: rgb(182, 182, 243);
+    padding: 10px;
+    width: 100px;
+    border: 4px solid rgb(108, 108, 238);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>REST API</title>
+</head>
+<body>
+    <div class="outer-container">
+    <div class="container">
+        <div class="text-box">
+            
+            <% if (locals.get) {%>
+            <p>ID:
+               <%=get.id  %>
+               Secret:
+               <%= get.secret %>
+               emScore:
+               <%= get.emScore %>
+               username:
+               <%= get.username %>
+            </p>
+            <% } else { %>
+                <p>Select your Desired Option</p>
+                <% } %>
+        </div>
+        <form action="/" method="post" class="form">
+            <label>ID:</label>
+            <input name="id">
+            <label>Secret:</label>
+            <input name = "secret">
+            <label>Score:</label>
+            <input name="score">
+            <label>Route</label>
+            <div class="buttons">
+            <input type="submit" value="Get" formaction="/get">
+            <input type="submit" value="Post" formaction="/post">
+            <input type="submit" value="Put" formaction="/put"> 
+            <input type="submit" value="Patch" formaction="/patch">
+            <input type="submit" value="Delete" formaction="/delete">
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
